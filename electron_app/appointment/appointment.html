@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background: blue;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Book an Appointment</h2>
+    <div class="container">
+        <p><strong>Doctor:</strong> <span id="doctor-name">Loading...</span></p>
+        <p><strong>Specialty:</strong> <span id="doctor-specialty">Loading...</span></p>
+
+        <label for="slot">Select a Slot:</label>
+        <select id="slot"></select>
+
+        <button onclick="bookAppointment()">Create Appointment</button>
+    </div>
+
+    <script src="appointment.js"></script>
+</body>
+</html>

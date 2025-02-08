@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Doctor Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            text-align: center;
+        }
+        .doctor-list, .appointment-list {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .doctor, .appointment {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .doctor:hover {
+            background: #e6f7ff;
+        }
+        button {
+            background: rgb(224, 239, 162);
+            color: rgb(9, 8, 8);
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: rgb(224, 239, 162);;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Available Doctors</h2>
+    <div class="doctor-list" id="doctor-list">Loading doctors...</div>
+
+    <h2>Upcoming Appointments</h2>
+    <div class="appointment-list" id="appointment-list">Loading appointments...</div>
+
+    <script src="home.js"></script>
+</body>
+</html>
