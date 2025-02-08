@@ -44,4 +44,105 @@ It contain ```id```, ```doctor_id```, ```patient_id```, ```slot_id```, ```curren
 >Ideally this table should also contain the payment done or not etc. but to make it simple and working i used this.
 </ol>
 
+=======================================================================================================================================
+
+<h1>Tech Stack Used</h1><br/>
+<ol>
+  <li>
+    Fast API (Using Python) for the backend API's
+  </li>
+  <li>
+    MySQL for Database Storage
+  </li>
+  <li>
+    Electron Framework (Using JavaScript) for the Frontend
+  </li>
+</ol>
+
+=======================================================================================================================================
+
+<h1>How to setup</h1>
+<h2>There are 2 folder's inside the repository</h2>
+- FastAPI<br/>
+- Electron_App
+
+<h2>Let's setup the backend first</h2>
+<h3>Prerequisite</h3>
+<li>Python</li>
+<li>MySql</li>
+
+After installing the prereqisite, Open the terminal and run the below commands one by one:
+<li>
+
+  `python -m venv venv`
+</li>
+<li>
+
+  `source venv/bin/activate` for MAC
+</li>
+<li>
+
+  `pip install fastapi uvicorn sqlalchemy pymysql`<br/>
+Fastapi -> The framework to build our API.
+Uvicorn -> ASGI server to run FastAPI.
+Sqlalchemy -> ORM to interact with MySQL.
+Pymysql -> MySQL driver for Python.
+</li>
+<li>
+
+to verify run
+  `python -c "import fastapi; print('FastAPI installed successfully!')"`
+</li>
+<li>
+
+  `python models.py`
+</li>
+
+> You may get the errors, because you may not have created database. To get rid of the error you have to create database first.<br/>
+`mysql -u root -p` to enter into mysql, and than <br/>
+`mysql> create database medimeet_db;`
+<li>
+
+  Again run
+  `Python models.py`
+</li>
+<li>
+
+to run everything start server using
+  `uvicorn main:app –reload`
+</li>
+<li>
+you can also visit http://127.0.0.1:8000/docs to see the API's running in swagger
+</li>
+
+
+=======================================================================================================================================
+
+<h2>Let's setup the frontend now</h2>
+<h3>Prerequisite</h3>
+<li>Node</li>
+
+After installing the prereqisite, Open the terminal and run the below commands one by one:
+<li>
+
+  `npm init -y`
+  this will create package.json config file.
+</li>
+<li>
+
+  `npm install electron --save-dev`
+  It will add electron as a dev dependency
+</li>
+<li>
+
+  `npx electron -v` It should display version of electron
+</li>
+<li>
+
+  `npm start`
+</li>
+
+=======================================================================================================================================
+
+It is recommended that before running the application, please add few doctors and there slots so that everything should work perfectly.
 
